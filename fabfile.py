@@ -1,6 +1,8 @@
 from fabric.api import env, run, local, task
 import os
 
+env['stylesheet'] = "~/src/fabric_remote_ipython_kernel/tomorrow-night.css"
+
 
 @task
 def launch_kernel():
@@ -31,7 +33,7 @@ def connect(console_type):
     else:
         local("ipython qtconsole "
               "--existing {local_kernel_path} "
-              "--stylesheet=~/bin/.remote_kernel/tomorrow-night.css "
+              "--stylesheet={stylesheet} "
               "--IPythonWidget.font_size=12  "
               "--IPythonQtConsoleApp.hide_menubar=True "
               "--ssh {user}@{host}".format(console_type=console_type, **env))
