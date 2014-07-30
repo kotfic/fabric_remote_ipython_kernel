@@ -1,0 +1,10 @@
+QPlainTextEdit, QTextEdit { background-color: #2d2d2d;
+        color: #515151;
+        selection-background-color: #393939;}
+.error { color: #f2777a; }
+.in-prompt { color: #99cc99; }
+.in-prompt-number { font-weight: bold; }
+.out-prompt { color: #66cccc; }
+.out-prompt-number { font-weight: bold; }
+/* .inverted is used to highlight selected completion */
+.inverted { background-color: #393939 ; color: #2d2d2d; }
